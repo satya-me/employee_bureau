@@ -70,6 +70,12 @@
                                 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6 mdc-layout-grid__cell--span-8-tablet">
                                     <div id="revenue-map" class="revenue-world-map"></div>
                                 </div>
+                        </div>
+                        <div class="mdc-layout-grid__inner mt-2">
+                            
+                            <div
+                                class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6 mdc-layout-grid__cell--span-8-tablet">
+                                <div id="revenue-map" class="revenue-world-map"></div>
                             </div>
                         </div>
                     </div>
