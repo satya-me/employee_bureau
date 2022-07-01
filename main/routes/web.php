@@ -1,6 +1,10 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Middleware\ApiCheckPoint;
+use App\Http\Controllers\ApiController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,4 +32,12 @@ Route::post('/add_database', [App\Http\Controllers\HomeController::class, 'AddDa
 
 
 
-Route::post('/aadhar/search', [App\Http\Controllers\HomeController::class, 'AadharSearch'])->name('search_by_aadhar');
+Route::post('/aadhar/search', [App\Http\Controllers\SecureController::class, 'AadharSearch'])->name('search_by_aadhar');
+
+// account settings_system_daydream
+Route::get('/account/organization', [App\Http\Controllers\AccountController::class, 'AccountView'])->name('account_view');
+Route::get('/account/generate_api', [App\Http\Controllers\AccountController::class, 'GenerateApiKey'])->name('generate_api');
+Route::get('/account/get_api', [App\Http\Controllers\AccountController::class, 'GetApiKey'])->name('get_api');
+
+
+

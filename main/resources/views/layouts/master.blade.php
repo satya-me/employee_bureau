@@ -18,10 +18,14 @@
     <link rel="stylesheet" href="{{ asset('assets/css/demo/style.css') }}">
     <!-- End layout styles -->
     <link rel="shortcut icon" href="{{ asset('assets/images/favicon.png') }}" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="{{ asset('assets/js/preloader.js') }}"></script>
+    <script>
+        var mainURL = "{{ env('APP_API_URL') }}";
+    </script>
 </head>
 
 <body>
-    <script src="{{ asset('assets/js/preloader.js') }}"></script>
     <div class="body-wrapper">
         <!-- partial:partials/_sidebar.html -->
         <aside class="mdc-drawer mdc-drawer--dismissible mdc-drawer--open">
@@ -90,8 +94,10 @@
                             <i class="material-icons mdc-text-field__icon">search</i>
                             <form action="{{ url('aadhar/search') }}" method="post">
                                 @csrf
-                                <input class="mdc-text-field__input" name="aadhar_search" id="text-field-hero-input" value="">
-                                <input class="mdc-text-field__input" type="submit" value="Search" style="display: none">
+                                <input class="mdc-text-field__input" name="aadhar_search" id="text-field-hero-input"
+                                    value="">
+                                <input class="mdc-text-field__input" type="submit" value="Search"
+                                    style="display: none">
                             </form>
                             <div class="mdc-notched-outline">
                                 <div class="mdc-notched-outline__leading"></div>
@@ -160,7 +166,8 @@
                                         </div>
                                         <div
                                             class="item-content d-flex align-items-start flex-column justify-content-center">
-                                            <h6 class="item-subject font-weight-normal">Settings</h6>
+                                            <h6 class="item-subject font-weight-normal"><a
+                                                    href="{{ route('account_view') }}">Settings</a></h6>
                                         </div>
                                     </li>
                                     <li class="mdc-list-item" role="menuitem">

@@ -71,13 +71,5 @@ class HomeController extends Controller
         return view('add_database');
     }
 
-    public function AadharSearch(Request $request)
-    {
-        $aadhar = $request->aadhar_search;
-
-
-        $data = FraudDB::where('aadhar', $aadhar)->first();
-
-        return view('fraud_profile', compact('data'));
-    }
+    
 }
