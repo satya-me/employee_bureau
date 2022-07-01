@@ -80,4 +80,9 @@ class HomeController extends Controller
 
         return view('fraud_profile', compact('data'));
     }
+
+    public function ApiSetting()
+    {
+        return view('api');
+    }
 }

@@ -26,6 +26,8 @@ Route::get('/database', [App\Http\Controllers\HomeController::class, 'Database']
 Route::get('/add_database', [App\Http\Controllers\HomeController::class, 'AddDatabase'])->name('add_database');
 Route::post('/add_database', [App\Http\Controllers\HomeController::class, 'AddDatabase'])->name('add_database');
 
+Route::get('/api_setting', [App\Http\Controllers\HomeController::class, 'ApiSetting'])->name('api_setting');
+
 
 
 Route::post('/aadhar/search', [App\Http\Controllers\HomeController::class, 'AadharSearch'])->name('search_by_aadhar');

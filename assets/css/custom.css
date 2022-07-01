@@ -1,3 +1,7 @@
+:root {
+    --mdc-theme-primary: #0F76BB !important;
+}
+
 .add_btn {
     width: 50px;
     height: 15px;
@@ -31,3 +35,174 @@
     text-align: center;
 }
 
+.form-control {
+    display: block !important;
+    flex: 1 0 0%;
+    width: 100%;
+    padding: 0.375rem 0.75rem !important;
+    font-size: 1rem !important;
+    font-weight: 400 !important;
+    line-height: 1.5 !important;
+    color: #212529 !important;
+    background-color: #fff !important;
+    background-clip: padding-box !important;
+    border: 1px solid #ced4da !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+    border-radius: 0.25rem !important;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out !important;
+}
+
+.searchDashboard {
+    display: flex;
+    width: 80%;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+    border: 1px solid #0f76bbbd;
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075)!important;
+    padding: 3px 16px;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.searchDashboard input {
+    border: none !important;
+}
+
+.dashboard_panel {
+    display: flex;
+    flex-direction: column;
+}
+
+.col {
+    flex: 1 0 0%;
+}
+
+#text-field-hero-input {
+    transition: width 0.4s ease-in-out 0s;
+}
+
+#text-field-hero-input:focus {
+    width: 400px;
+}
+
+.aic {
+    align-items: center;
+}
+
+.jcc {
+    justify-content: center;
+}
+
+.color_theme {
+    color: #0f76bb;
+}
+
+.bg_theme {
+    background-color: #0f76bb;
+}
+
+.btn-white {
+    border: 1px solid #fff !important;
+    color: #fff !important;
+}
+
+.pr {
+    position: relative !important;
+}
+
+.fraudBg {
+    max-width: 80px;
+}
+
+.z99 {
+    z-index: 99;
+}
+
+.totalFraud h1 {
+    /* font-size: 2vw !important; */
+}
+
+.whitelayer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(3px);
+    z-index: 10;
+}
+
+.name {
+    text-transform: capitalize;
+}
+
+.walletIcon {
+    width: 30px;
+    margin-right: 1rem;
+}
+
+.walletBalance {
+    position: absolute;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15)!important;
+    border-radius: 50px;
+    top: -15px;
+    left: -15px;
+    color: #fff;
+    background-color: #0f76bbd9;
+    padding: 5px;
+}
+
+.filelabel {
+    width: 100%;
+    border: 1px solid #e9eaef;
+    border-radius: 5px;
+    display: flex;
+    padding: 5px;
+    transition: border 300ms ease;
+    cursor: pointer;
+    text-align: center;
+    margin: 0;
+}
+
+.filelabel i {
+    display: block;
+    font-size: 30px;
+    padding-bottom: 5px;
+}
+
+.filelabel i,
+.filelabel .title {
+    color: grey;
+    transition: 200ms color;
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+}
+
+.filelabel:hover {
+    border: 1px solid #b5b5b9 !important;
+}
+
+
+/* .filelabel:hover i,
+.filelabel:hover .title {
+    color: #b5b5b9 !important;
+} */
+
+#FileInput {
+    display: none;
+}
+
+.fa-file-circle-plus:before {
+    content: "\e4ee" !important;
+}
+
+.mdc-text-field__input::-webkit-scrollbar {
+    width: 15px;
+}

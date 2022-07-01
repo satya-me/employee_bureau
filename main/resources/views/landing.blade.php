@@ -34,7 +34,11 @@
     <link rel="stylesheet" href="landing/assets/css/lineicons.css" />
     <link rel="stylesheet" href="landing/assets/css/ud-styles.css" />
 </head>
-
+<style>
+    .btn-white{
+        background-color: #fff;
+    }
+</style>
 <body>
     <!-- ====== Header Start ====== -->
     <header class="ud-header">
@@ -153,8 +157,10 @@
                             </li> --}}
                         </ul>
                     </div>
-                    <div class="ud-hero-brands-wrapper wow fadeInUp" data-wow-delay=".3s">
-                        <img src="landing/assets/images/hero/brand.svg" alt="brand" />
+                    <div class="ud-hero-brands-wrapper wow fadeInUp d-flex aic col-sm-12 col-md-5 mx-auto" data-wow-delay=".3s">
+                        <!-- <img src="landing/assets/images/hero/brand.svg" alt="brand" /> -->
+                        <input type="text" class="form-control" placeholder="Search">
+                        <a href="#" class="btn btn-white ms-3">Search</a>
                     </div>
                     <div class="ud-hero-image wow fadeInUp" data-wow-delay=".25s">
                         <img src="{{ asset('assets/images/hero-dash-image.png') }}" alt="hero-image" />
