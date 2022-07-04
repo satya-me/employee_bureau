@@ -117,7 +117,7 @@
                         <div class="walletIconWrap pr">
                             <span class="walletBalance">1</span>
                             <!-- <img src="{{ asset('/') }}/assets/images/wallet.png" alt="user" class="walletIcon"> -->
-                            <i class="fa-solid fa-wallet"></i>
+                            <a href="{{route('wallet')}}"><i class="fa-solid fa-wallet"></i></a>
                         </div>
                         <div class="menu-button-container menu-profile d-none d-md-block">
                             <button class="mdc-button mdc-menu-button">

@@ -21,13 +21,24 @@ class SecureController extends Controller
 
         $check = PersonalAccessToken::where('tokenable_id', Auth::user()->id);
         if ($check->count() == 0) {
-            return "User has no API access";
+            return [
+                'code' => 1003,
+                'status' => 'Denied',
+                'message' => 'User has no API access',
+            ];
         } else {
             if ($check->first()->status == '' || $check->first()->status == 0) {
-                return "Not a active user";
-                // return Redirect::route('activate');
-            }else{
-                return "active user";
+                return [
+                    'code' => 1005,
+                    'status' => 'Denied',
+                    'message' => 'Not allowed to access this resource',
+                ];
+            } else {
+                return [
+                    'code' => 2001,
+                    'status' => 'Access',
+                    'message' => 'User allowed',
+                ];
             }
         }
     }
@@ -35,11 +46,17 @@ class SecureController extends Controller
     public function AadharSearch(Request $request)
     {
 
-        return $this->SecureEyeAction();
-        $aadhar = $request->aadhar_search;
+        $eye = $this->SecureEyeAction();
 
-        $data = FraudDB::where('aadhar', $aadhar)->first();
+        if ($eye{'code'} === 2001) {
+            # code...
+            $aadhar = $request->aadhar_search;
 
-        return view('fraud_profile', compact('data'));
+            $data = FraudDB::where('aadhar', $aadhar)->first();
+
+            return view('fraud_profile', compact('data'));
+        }
+        return view('wallet.wallet', compact('eye'));
+
     }
 }

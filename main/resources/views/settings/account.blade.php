@@ -100,7 +100,7 @@
                 </div>
                 <div class="mdc-layout-grid__cell--span-4 mdc-layout-grid__cell--span-12-desktop stretch-card">
                     <div class="mdc-card">
-                        <h6 class="card-title">Select Menu</h6>
+                        {{-- <h6 class="card-title">Select Menu</h6> --}}
                         {{-- <div class="template-demo">
                             <div class="mdc-select demo-width-class" data-mdc-auto-init="MDCSelect">
                                 <input type="hidden" name="enhanced-select">

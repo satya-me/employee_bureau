@@ -10,6 +10,11 @@ use Illuminate\Support\Facades\DB;
 
 class AccountController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function AccountView(Request $request)
     {
         return view('settings.account');
@@ -30,12 +35,12 @@ class AccountController extends Controller
             $token = $user->createToken('my-app-token')->plainTextToken;
             $affected = DB::table('personal_access_tokens')
                 ->where('tokenable_id', Auth::user()->id)
-                ->update(['web_token' => $token, 'is_api' => 0, 'flag' => 1]);
+                ->update(['web_token' => $token, 'is_api' => 1, 'flag' => 1]);
 
             $response = [
 
                 'flag' => 'just_created',
-                
+
             ];
         }
 
@@ -48,7 +53,7 @@ class AccountController extends Controller
         $response = [
             'flag' => 'exist_user',
             '_token' => $check,
-            'button' => 'checked'
+            'button' => 'checked',
         ];
         return response($response, 201);
     }

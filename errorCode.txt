@@ -1,0 +1,17 @@
+return [
+                'code' => 1003,
+                'status' => 'Denied',
+                'message' => 'User has no API access',
+            ];
+
+return [
+                    'code' => 1005,
+                    'status' => 'Denied',
+                    'message' => 'Not allowed to access this resource',
+                ];
+
+return [
+                    'code' => 2001,
+                    'status' => 'Access',
+                    'message' => 'User allowed',
+                ];
