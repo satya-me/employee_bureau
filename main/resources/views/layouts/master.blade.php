@@ -19,9 +19,14 @@
     <link rel="stylesheet" href="{{ asset('assets/css/custom.css') }}">
     <!-- End layout styles -->
     <link rel="shortcut icon" href="{{ asset('assets/images/favicon.png') }}" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
     <script src="{{ asset('assets/js/preloader.js') }}"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script>
         var mainURL = "{{ env('APP_API_URL') }}";
     </script>
@@ -33,7 +38,8 @@
         <aside class="mdc-drawer mdc-drawer--dismissible mdc-drawer--open ">
             <div class="mdc-drawer__header">
                 <a href="{{ url('/home') }}" class="brand-logo">
-                    <img class="logoHeight" style="height: 75px;border: solid 1px;" src="{{ asset('assets/images/main-logo.png') }}" alt="logo">
+                    <img class="logoHeight" style="height: 75px;border: solid 1px;"
+                        src="{{ asset('assets/images/main-logo.png') }}" alt="logo">
                 </a>
             </div>
             <div class="mdc-drawer__content">
@@ -45,14 +51,17 @@
                     <nav class="mdc-list mdc-drawer-menu">
                         <div class="mdc-list-item mdc-drawer-item">
                             <a class="mdc-drawer-link" href="{{ url('/home') }}">
-                                <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon" aria-hidden="true">home</i>
+                                <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon"
+                                    aria-hidden="true">home</i>
                                 Dashboard
                             </a>
                         </div>
 
                         <div class="mdc-list-item mdc-drawer-item">
-                            <a class="mdc-expansion-panel-link" href="#" data-toggle="expansionPanel" data-target="sample-page-submenu">
-                                <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon" aria-hidden="true">pages</i>
+                            <a class="mdc-expansion-panel-link" href="#" data-toggle="expansionPanel"
+                                data-target="sample-page-submenu">
+                                <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon"
+                                    aria-hidden="true">pages</i>
                                 Database
                                 <i class="mdc-drawer-arrow material-icons">chevron_right</i>
                             </a>
@@ -77,7 +86,8 @@
 
                         <div class="mdc-list-item mdc-drawer-item">
                             <a class="mdc-drawer-link" href="{{ url('/api_setting') }}">
-                                <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon" aria-hidden="true">web</i>
+                                <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon"
+                                    aria-hidden="true">web</i>
                                 API
                             </a>
                         </div>
@@ -91,9 +101,10 @@
             <header class="mdc-top-app-bar" style="background: #fff;">
                 <div class="mdc-top-app-bar__row">
                     <div class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-                        <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button sidebar-toggler">menu</button>
+                        <button
+                            class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button sidebar-toggler">menu</button>
                         <span class="mdc-top-app-bar__title">Greetings {{ Auth::user()->name }}!</span>
-                        <div
+                        {{-- <div
                             class="mdc-text-field mdc-text-field--outlined mdc-text-field--with-leading-icon search-text-field d-none d-md-flex">
                             <i class="material-icons mdc-text-field__icon">search</i>
                             <form action="{{ url('aadhar/search') }}" method="post">
@@ -111,19 +122,21 @@
                                 </div>
                                 <div class="mdc-notched-outline__trailing"></div>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
-                    <div class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end mdc-top-app-bar__section-right">
+                    <div
+                        class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end mdc-top-app-bar__section-right">
                         <div class="walletIconWrap pr">
                             <span class="walletBalance">1</span>
                             <!-- <img src="{{ asset('/') }}/assets/images/wallet.png" alt="user" class="walletIcon"> -->
-                            <a href="{{route('wallet')}}"><i class="fa-solid fa-wallet"></i></a>
+                            <a href="{{ route('wallet') }}"><i class="fa-solid fa-wallet"></i></a>
                         </div>
                         <div class="menu-button-container menu-profile d-none d-md-block">
                             <button class="mdc-button mdc-menu-button">
                                 <span class="d-flex align-items-center">
                                     <span class="figure">
-                                        <img src="{{ asset('/') }}/assets/images/faces/face1.jpg" alt="user" class="user">
+                                        <img src="{{ asset('/') }}/assets/images/faces/face1.jpg" alt="user"
+                                            class="user">
                                     </span>
                                     <span class="user-name">{{ Auth::user()->name }}</span>
                                 </span>
@@ -134,7 +147,8 @@
                                         <div class="item-thumbnail item-thumbnail-icon-only">
                                             <i class="mdi mdi-account-edit-outline text-primary"></i>
                                         </div>
-                                        <div class="item-content d-flex align-items-start flex-column justify-content-center">
+                                        <div
+                                            class="item-content d-flex align-items-start flex-column justify-content-center">
                                             <h6 class="item-subject font-weight-normal">Edit profile</h6>
                                         </div>
                                     </li>
@@ -142,12 +156,16 @@
                                         <div class="item-thumbnail item-thumbnail-icon-only">
                                             <i class="mdi mdi-settings-outline text-primary"></i>
                                         </div>
-                                        <div class="item-content d-flex align-items-start flex-column justify-content-center">
-                                            <h6 class="item-subject font-weight-normal"><a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                        <div
+                                            class="item-content d-flex align-items-start flex-column justify-content-center">
+                                            <h6 class="item-subject font-weight-normal"><a class="dropdown-item"
+                                                    href="{{ route('logout') }}"
+                                                    onclick="event.preventDefault();
                                                               document.getElementById('logout-form').submit();">
                                                     {{ __('Logout') }}
                                                 </a></h6>
-                                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                                style="display: none;">
                                                 @csrf
                                             </form>
                                         </div>
@@ -166,19 +184,21 @@
                                         <div class="item-thumbnail item-thumbnail-icon-only">
                                             <i class="mdi mdi-alert-circle-outline text-primary"></i>
                                         </div>
-                                        <div class="item-content d-flex align-items-start flex-column justify-content-center">
-                                            <h6 class="item-subject font-weight-normal">Settings</h6>
                                         <div
                                             class="item-content d-flex align-items-start flex-column justify-content-center">
-                                            <h6 class="item-subject font-weight-normal"><a
-                                                    href="{{ route('account_view') }}">Settings</a></h6>
-                                        </div>
+                                            <h6 class="item-subject font-weight-normal">Settings</h6>
+                                            <div
+                                                class="item-content d-flex align-items-start flex-column justify-content-center">
+                                                <h6 class="item-subject font-weight-normal"><a
+                                                        href="{{ route('account_view') }}">Settings</a></h6>
+                                            </div>
                                     </li>
                                     <li class="mdc-list-item" role="menuitem">
                                         <div class="item-thumbnail item-thumbnail-icon-only">
                                             <i class="mdi mdi-progress-download text-primary"></i>
                                         </div>
-                                        <div class="item-content d-flex align-items-start flex-column justify-content-center">
+                                        <div
+                                            class="item-content d-flex align-items-start flex-column justify-content-center">
                                             <h6 class="item-subject font-weight-normal">Update</h6>
                                         </div>
                                     </li>
@@ -197,7 +217,8 @@
             </div>
         </div>
     </div>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
     <!-- plugins:js -->
     <script src="{{ asset('assets/vendors/js/vendor.bundle.base.js') }}"></script>

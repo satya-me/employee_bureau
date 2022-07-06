@@ -11,7 +11,7 @@
                 <i class="material-icons mdc-text-field__icon">search</i>
                 <form action="{{ url('aadhar/search') }}" method="post" id="aadhar_search_form" class="col">
                     @csrf
-                    <input class="form-control" name="aadhar_search" id="text-field-hero-input" value="">
+                    <input class="form-control" name="aadhar_search" id="text-field-hero-input" value="" placeholder="Aadher No....">
                     <input class="t" type="submit" value="Search" style="display: none">
                 </form>
             </div>
