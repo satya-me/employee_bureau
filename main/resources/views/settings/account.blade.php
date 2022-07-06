@@ -143,19 +143,26 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                     </div>
                 </div>
                 <div class="mdc-layout-grid__cell--span-4 mdc-layout-grid__cell--span-12-desktop stretch-card">
                     <div class="mdc-card">
 
+                        <style>
+                            .ap-sty {
+                                border: solid black 2px;
+                                padding: 5px;
+                                background: #8080801c;
+                            }
+                        </style>
                         <div class="template-demo">
                             <div class="mdc-layout-grid__inner">
-                                <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-12-desktop">
-                                    <h5>API key: <code style="color: tomato" id="tomato"> N/A</code></h5>
+                                <div class="mdc-layout-grid__cell stretch-card ap-sty  mdc-layout-grid__cell--span-12-desktop">
+                                    <h5>API key: <code style="color: tomato; background: white;" id="tomato"> N/A</code></h5>
                                 </div>
-                                <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-12-desktop">
-                                    <h5>WEB key: <code style="color: tomato" id="banana">N/A</code></h5>
+                                <div class="mdc-layout-grid__cell stretch-card ap-sty mdc-layout-grid__cell--span-12-desktop">
+                                    <h5>WEB key: <code style="color: tomato; background: white;" id="banana">N/A</code></h5>
                                 </div>
                             </div>
                         </div>
