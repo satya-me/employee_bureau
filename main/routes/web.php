@@ -5,6 +5,10 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Middleware\ApiCheckPoint;
 use App\Http\Controllers\ApiController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\SecureController;
+use App\Http\Controllers\WalletController;
+use App\Http\Controllers\AccountController;
+use App\Http\Controllers\RazorpayPaymentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -48,5 +52,11 @@ Route::post('/account/recharge', [App\Http\Controllers\WalletController::class, 
 
 
 
+// Gateway
+Route::get('razorpay-payment', [RazorpayPaymentController::class, 'index']);
+Route::post('razorpay-payment', [RazorpayPaymentController::class, 'store'])->name('razorpay.payment.store');
 
+
+Route::post('transaction-payment', [WalletController::class, 'Transaction'])->name('transaction.payment');
+Route::get('balance/balance', [WalletController::class, 'Balance'])->name('balance.balance');
 

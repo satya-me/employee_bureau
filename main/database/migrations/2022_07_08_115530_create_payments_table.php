@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateApiCallCountsTable extends Migration
+class CreatePaymentsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,14 @@ class CreateApiCallCountsTable extends Migration
      */
     public function up()
     {
-        Schema::create('api_call_counts', function (Blueprint $table) {
+        Schema::create('payments', function (Blueprint $table) {
             $table->id();
-            $table->string('api_type');
-            $table->string('rate_per_call');
+            $table->string('amt');
+            $table->string('email');
+            $table->string('mobile');
+            $table->string('name');
+            $table->string('razorpay_payment_id');
+            $table->string('user_id');
             $table->timestamps();
         });
     }
@@ -28,6 +32,6 @@ class CreateApiCallCountsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('api_call_counts');
+        Schema::dropIfExists('payments');
     }
 }

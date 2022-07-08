@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Employee Bureaucate</title>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- plugins:css -->
     <link rel="stylesheet" href="{{ asset('assets/vendors/mdi/css/materialdesignicons.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/vendors/css/vendor.bundle.base.css') }}">
@@ -89,6 +90,14 @@
                                 <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon"
                                     aria-hidden="true">web</i>
                                 API
+                            </a>
+                        </div>
+
+                        <div class="mdc-list-item mdc-drawer-item">
+                            <a class="mdc-drawer-link" href="{{ url('/razorpay-payment') }}">
+                                <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon"
+                                    aria-hidden="true">web</i>
+                                Gateway
                             </a>
                         </div>
                     </nav>
@@ -236,7 +245,7 @@
     <!-- Custom js for this page-->
     <script src="{{ asset('assets/js/dashboard.js') }}"></script>
     <!-- End custom js for this page-->
-    @yield('script')
+    @yield('scripts')
 </body>
 
 </html>
